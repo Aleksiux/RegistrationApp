@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/soft_blue_green"
+    android:layout_margin="20dp"
+    >
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="15dp"
+        app:cardElevation="12sp">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/soft_blue_green"
+
+    >
+    <TextView
+        android:id="@+id/iveskite"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Įveskite"
+        android:textAlignment="center"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toTopOf="@+id/vardas"
+        />
+    <EditText
+        android:id="@+id/vardas"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:hint="Kliento vardą"
+        android:textAlignment="center"
+        android:textSize="25dp"
+        app:layout_constraintBottom_toBottomOf="@id/iveskite" />
+
+    <EditText
+        android:id="@+id/pavarde"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginBottom="80dp"
+        android:hint="Kliento pavarde"
+        android:textAlignment="center"
+        android:textSize="25dp"
+        app:layout_constraintTop_toBottomOf="@+id/vardas"/>
+
+    <EditText
+        android:id="@+id/tel_nr"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:inputType="phone"
+        android:hint="Kliento tel. numerį"
+        android:textAlignment="center"
+        android:textSize="25dp"
+        app:layout_constraintTop_toBottomOf="@+id/pavarde" />
+
+<!--    <EditText
+        android:id="@+id/search_Doctor"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:hint="Gydytojas"
+        android:textAlignment="center"
+        android:textSize="25dp"
+        app:layout_constraintTop_toBottomOf="@+id/tel_nr" />-->
+
+
+    <EditText
+        android:id="@+id/eventname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Kuo skundžiasi? Bei daktaro pavardė"
+        android:textAlignment="center"
+        android:textSize="25dp"
+        app:layout_constraintTop_toBottomOf="@+id/tel_nr" />
+
+
+    <ImageButton
+        android:id="@+id/set_event_time"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/watch"
+        app:layout_constraintEnd_toStartOf="@+id/event_time"
+        app:layout_constraintRight_toLeftOf="@+id/event_time"
+        app:layout_constraintTop_toBottomOf="@+id/eventname" />
+
+
+    <EditText
+        android:id="@+id/event_time"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginTop="80dp"
+        android:drawablePadding="5dp"
+        android:text="12:00 val."
+        android:textColor="#464153"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tel_nr"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/add_event"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:text="Registruoti pacientą"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/event_time"
+        tools:ignore="MissingConstraints" />
+</androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

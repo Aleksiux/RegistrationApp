@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <ImageView
+        android:id="@+id/bgHeader"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:contentDescription="header"
+        android:scaleType="fitXY"
+        android:src="@drawable/header" />
+
+    <ImageView
+        android:id="@+id/bgFooter"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="25dp"
+        android:contentDescription="footer"
+        android:elevation="3dp"
+        android:scaleType="fitXY"
+
+        android:src="@drawable/footer" />
+    <TextView
+        android:id="@+id/tvLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/bgHeader"
+        android:layout_centerHorizontal="true"
+        android:text="Registruotis"
+        android:textSize="40sp" />
+
+    <ScrollView
+        android:id="@+id/sv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bgFooter"
+        android:layout_below="@id/bgHeader"
+        android:layout_marginBottom="-100dp">
+
+        <RelativeLayout
+            android:id="@+id/view4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/bgFooter"
+            android:layout_below="@+id/bgHeader"
+            android:layout_marginLeft="-70dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="50dp"
+            android:layout_marginRight="50dp">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                app:cardCornerRadius="70dp"
+                app:cardElevation="3dp">
+
+                <RelativeLayout
+                    android:id="@+id/view5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="40dp"
+                    android:padding="10dp">
+
+
+                    <EditText
+                        android:id="@+id/etEmail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="15dp"
+                        android:background="@android:color/transparent"
+                        android:drawableLeft="@drawable/person"
+                        android:drawablePadding="30dp"
+                        android:hint="El. paštas"
+                        android:inputType="text"
+                        android:padding="10dp" />
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_below="@id/etEmail"
+                        android:background="#71d2d2d2" />
+
+                    <EditText
+                        android:id="@+id/Name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="15dp"
+                        android:layout_below="@id/etEmail"
+                        android:background="@android:color/transparent"
+                        android:drawableLeft="@drawable/person"
+                        android:drawablePadding="30dp"
+                        android:hint="Vardas"
+                        android:digits="AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZzÁáÂâÃãÀàÇçÉéÊêÍíÓóÔôÕõÚúąĄčČęĘėĖįĮšŠųŲūŪžŽ"
+                        android:padding="10dp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_below="@id/Name"
+                        android:background="#71d2d2d2" />
+
+                    <EditText
+                        android:id="@+id/Surname"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="15dp"
+                        android:layout_below="@id/Name"
+                        android:background="@android:color/transparent"
+                        android:drawableLeft="@drawable/person"
+                        android:drawablePadding="30dp"
+                        android:hint="Pavardė"
+                        android:digits="AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZzÁáÂâÃãÀàÇçÉéÊêÍíÓóÔôÕõÚúąĄčČęĘėĖįĮšŠųŲūŪžŽ"
+                        android:padding="10dp" />
+
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_below="@id/Surname"
+                        android:background="#71d2d2d2" />
+
+                    <EditText
+                        android:id="@+id/BirthDay"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="15dp"
+                        android:layout_below="@id/Surname"
+                        android:background="@android:color/transparent"
+                        android:drawableLeft="@drawable/bday"
+                        android:drawablePadding="30dp"
+                        android:hint="Gimimo data"
+                        android:inputType="date"
+                        android:padding="10dp" />
+
+
+                    <View
+                        android:id="@+id/view1"
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_below="@id/BirthDay"
+                        android:background="#71d2d2d2" />
+
+
+                    <EditText
+                        android:id="@+id/doctor"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="15dp"
+                        android:layout_below="@id/BirthDay"
+                        android:background="@android:color/transparent"
+                        android:drawableLeft="@drawable/doc"
+                        android:drawablePadding="30dp"
+                        android:hint="Gydytojas"
+                        android:padding="10dp"
+                        android:digits="AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZzÁáÂâÃãÀàÇçÉéÊêÍíÓóÔôÕõÚúąĄčČęĘėĖįĮšŠųŲūŪžŽ"/>
+
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_below="@id/doctor"
+                        android:background="#71d2d2d2" />
+
+                    <EditText
+                        android:id="@+id/etPassword"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/doctor"
+                        android:layout_margin="15dp"
+                        android:background="@android:color/transparent"
+                        android:drawableLeft="@drawable/lock"
+                        android:drawablePadding="30dp"
+                        android:hint="Slaptažodis"
+                        android:inputType="textPassword"
+                        android:padding="10dp" />
+
+
+
+                    <View
+                        android:id="@+id/view3"
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_below="@id/etPassword"
+                        android:background="#71d2d2d2" />
+
+                    <EditText
+                        android:id="@+id/confirm_etPassword"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/etPassword"
+                        android:layout_margin="15dp"
+                        android:background="@android:color/transparent"
+                        android:drawableLeft="@drawable/lock"
+                        android:drawablePadding="30dp"
+                        android:hint="Pakartokite slaptažodį"
+                        android:inputType="textPassword"
+                        android:padding="10dp" />
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <RelativeLayout
+                android:id="@+id/view2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/cv"
+                android:layout_alignRight="@+id/cv"
+                android:layout_alignBottom="@+id/cv"
+                android:layout_marginRight="-15dp"
+                android:elevation="10dp">
+
+                <ImageButton
+                    android:id="@+id/btnReg"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="210dp"
+                    android:background="@drawable/bt_ui"
+                    android:src="@drawable/arrow" />
+
+            </RelativeLayout>
+            <TextView
+                android:id="@+id/textview_login"
+                android:gravity="right"
+                android:layout_marginTop="-5dp"
+                android:layout_marginRight="50dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:text="Prisijungti"
+                />
+
+        </RelativeLayout>
+
+    </ScrollView>
+</RelativeLayout>
